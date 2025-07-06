@@ -4,12 +4,20 @@ import './App.scss';
 export const App = () => {
   const [count, setCount] = useState(0);
 
+  let nextCount = null;
+
   const addOne = () => {
-    setCount(prev => prev + 1);
+    setCount(prev => {
+      nextCount = (nextCount === null ? prev : nextCount) + 1;
+      return nextCount;
+    });
   };
 
   const add100 = () => {
-    setCount(prev => prev + 100);
+    setCount(prev => {
+      nextCount = (nextCount === null ? prev : nextCount) + 100;
+      return nextCount;
+    });
   };
 
   // DON'T change the code below
