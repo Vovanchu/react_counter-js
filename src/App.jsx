@@ -9,6 +9,7 @@ export const App = () => {
   const addOne = () => {
     setCount(prev => {
       nextCount = (nextCount === null ? prev : nextCount) + 1;
+
       return nextCount;
     });
   };
@@ -16,6 +17,7 @@ export const App = () => {
   const add100 = () => {
     setCount(prev => {
       nextCount = (nextCount === null ? prev : nextCount) + 100;
+
       return nextCount;
     });
   };
